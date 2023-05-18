@@ -441,9 +441,9 @@ parte inferior de la imagen con informacion del proyecto */
 #contacto .contenedor-form .input-full {
     width: 100%;
 }
-#contacto .titulo-seccion{
+/* #contacto .titulo-seccion{ */
 
-}
+/* } */
 #contacto .btn-enviar{
     display: block;
     margin: auto;
