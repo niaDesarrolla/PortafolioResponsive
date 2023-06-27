@@ -1,4 +1,4 @@
-//Funcion que aplica el estil a la opcion seleccionada  en el menu y quita la previamente seleccionada 
+//Funcion que aplica el estilo a la opcion seleccionada  en el menu y quita la previamente seleccionada 
 function seleccionar(link){
     var opciones = document.querySelectorAll('#links a');
     opciones[0].className = "";
@@ -40,8 +40,8 @@ function efectoHabilidades(){
     if(distancia_skills >=300){
         document.getElementById("html").classList.add("barra-progreso1");
         document.getElementById("js").classList.add("barra-progreso2");
-        document.getElementById("bd").classList.add("barra-progreso3");
-        document.getElementById("ps").classList.add("barra-progreso4");
+        document.getElementById("ra").classList.add("barra-progreso3");
+        document.getElementById("sql").classList.add("barra-progreso4");
     }
 
 }

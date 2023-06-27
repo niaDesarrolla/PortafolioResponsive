@@ -34,7 +34,7 @@ html{
 /* color del logo /LP/ */
 #inicio .contenido header .contenido-header h1 {
     text-align: center;
-    color: #ff5080;
+    color: #a159a3;
 }
 #inicio .contenido header .contenido-header nav ul{
     list-style: none;
@@ -50,7 +50,7 @@ html{
 
 }
 #inicio .contenido header .contenido-header nav ul a:hover{
-    color: #ff5080;
+    color: #a159a3;
 }
 #inicio .contenido header .contenido-header .redes a{
     text-decoration: none;
@@ -61,10 +61,10 @@ html{
 }
 /* color al hacer click en iconos de redes sociales */
 #inicio .contenido header .contenido-header .redes a:hover{
-    color: #ff5080;
+    color: #a159a3;
 }
 #inicio .contenido header .contenido-header .seleccionado{
-    color: #ff5080;
+    color: #a159a3;
 }
 #inicio .contenido .presentacion{
     max-width: 1100px;
@@ -89,7 +89,7 @@ html{
 }
 #inicio .contenido .presentacion h2 span{
     font-size: 25px;
-    color: #ff5080;
+    color: #a159a3;
 }
 #inicio .contenido .presentacion .descripcion{
     max-width: 700px ;
@@ -114,7 +114,7 @@ html{
 }
 /* color del boton */
 #inicio .contenido .presentacion a:hover {
-    background-color: #ff5080;
+    background-color: #a159a3;
 }
 #icono-nav{
    color: #fff;
@@ -157,7 +157,7 @@ html{
     letter-spacing: 2px;
 }
 #sobremmi .sobremi.h2 span{
-    color: #ff5080;
+    color: #a159a3;
 }
 #sobremi .sobremi h3{
     font-size: 18px;
@@ -181,9 +181,10 @@ html{
     border: 1px solid #000;
     margin-top: 30px;
     transition: .5s;
+
 }
 #sobremi .sobremi a:hover {
-    background-color: #ff5080;
+    background-color: #a159a3;
     color: #fff;
 }
 
@@ -250,7 +251,7 @@ html{
 
 /* SECCION SKILLS */
 .contenedor-skills{
-    background: linear-gradient(#eb5a5acc, rgba(33, 16, 16, 8)), url("img/fondo-skills.jpg");
+    background: linear-gradient(#a159a3, rgba(33, 16, 16, 8)), url("img/fondo-skills.jpg");
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-size:cover;
@@ -341,13 +342,12 @@ la  animación de la barra*/
 }
 
 /* SECCION PORTAFOLIO */
-#portafolio{
+#portfolio{
     max-width: 1100px;
-    padding: 100px 0;
+    padding: 100px 0; 
     margin: auto;
-
 }
-#portafolio .titulo-seccion{
+#portfolio .titulo-seccion{
     text-align: center;
     font-size: 22px;
     text-transform: uppercase;
@@ -356,52 +356,57 @@ la  animación de la barra*/
     text-decoration-color: #d3d3d3;
     text-decoration-thickness: 5px;
 }
-#portafolio .fila{
+#portfolio .fila{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 30px 0;
 }
-#portafolio .fila .proyecto{
+
+#portfolio .fila .proyecto{
+    flex-basis: calc(33.33% - 20px);
     max-width: 450px;
     border: 1px solid #000;
     margin: 0 10px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
 }
-#portafolio .fila .proyecto img{
+#portfolio .fila .proyecto img{
     width: 100%;
     height: 100%;
     filter: grayscale(1);
     object-fit: cover;
+    transition: .5s;
 }
 
 /* Efecto que permite al clicar en cada proyecto que 
  las imagenes se vean  en color */
-#portafolio .fila .proyecto:hover img {
+#portfolio .fila .proyecto:hover img {
     filter: grayscale(0);
 }
-#portafolio .fila .proyecto .info{
+#portfolio .fila .proyecto .info{
     position: absolute;
     left: 0;
     background-color: rgba(0, 0, 0, .8);
-    color: #ff5080;
+    color: #a159a3;
     width:100%;
     padding: 10px;
     opacity: 0;
     bottom: -40px;
-    transition: .5%;
+    transition: .5s;
 }
 
 /* al poner el cursor sobre la imagen se despliega una peque;a barra de la 
 parte inferior de la imagen con informacion del proyecto */
-#portafolio .fila .proyecto:hover .info{
+#portfolio .fila .proyecto:hover .info{
     opacity: 1;   
     bottom: 0;
 }
 
 /* SECCION CONTACTO */
 #contacto{
-    padding: 100% 15px;
+    padding: 0px;
 }
 #contacto .titulo-seccion{
     margin-bottom: 20px; 
@@ -455,16 +460,20 @@ parte inferior de la imagen con informacion del proyecto */
 
 }
 #contacto .btn-enviar:hover{
-    background-color: #ff5080;
+    background-color: #a159a3;
     color: #fff;
 }
 
 /* FOOTER */
 footer{
-    background-color: #000;
+    background: linear-gradient(rgba(0, 0, 0,.7),rgba(0, 0, 0, .7));
     color: #fff;
     text-align: center;
     padding: 30px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 footer a{
     text-decoration: none;
@@ -532,15 +541,15 @@ footer a{
         margin: 10px auto;
     }
     #contenedor-skills{
-        padding: 30px 20px;
+        padding: 50px 20px;
     }
-    #portafolio{
+    #portfolio{
         padding: 50px 0;
     }
-    #portafolio .fila {
+    #portfolio .fila {
         display: block;
     }
-    #portafolio .fila .proyecto{
+    #portfolio .fila .proyecto{
         margin: 10px auto;
     }
     #contacto{
