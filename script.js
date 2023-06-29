@@ -45,3 +45,46 @@ function efectoHabilidades(){
     }
 
 }
+
+//funcionalidad del formulario
+
+function enviarFormulario(event) {
+  event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
+
+  // Obtener los valores de los campos del formulario
+  var nombre = document.querySelector('#contacto input[type="text"][placeholder="Nombre Completo"]').value;
+  var correo = document.querySelector('#contacto input[type="text"][placeholder="Direccion de email"]').value;
+  var equipo = document.querySelector('#contacto input[type="text"][placeholder="Team..."]').value;
+  var mensaje = document.querySelector('#contacto textarea').value;
+
+  // Crear un objeto con los datos del formulario
+  var datosFormulario = {
+    nombre: nombre,
+    correo: correo,
+    equipo: equipo,
+    mensaje: mensaje
+  };
+
+  // Enviar los datos al servidor utilizando la API Fetch
+  fetch('https://portafolio-responsive.vercel.app/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(datosFormulario),
+  })
+    .then(function(response) {
+      // Manejar la respuesta del servidor
+      if (response.ok) {
+        // El formulario se envió correctamente
+        console.log('Formulario enviado con éxito');
+      } else {
+        // Hubo un error al enviar el formulario
+        console.error('Error al enviar el formulario');
+      }
+    })
+    .catch(function(error) {
+      // Manejar errores de red u otros errores
+      console.error('Error en la solicitud:', error);
+    });
+}
