@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
 
@@ -44,4 +44,4 @@ const mailOptions = {
 // Iniciar el servidor
 app.listen(3000, () => {
   console.log('Servidor Express.js iniciado en el puerto 3000');
-});
+}); */

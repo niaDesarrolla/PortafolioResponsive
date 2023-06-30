@@ -47,14 +47,15 @@ function efectoHabilidades(){
 }
 
 //funcionalidad del formulario
-
+/* 
 function enviarFormulario(event) {
   event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
+
 
   // Obtener los valores de los campos del formulario
   var nombre = document.querySelector('#contacto input[type="text"][placeholder="Nombre Completo"]').value;
   var correo = document.querySelector('#contacto input[type="text"][placeholder="Direccion de email"]').value;
-  var equipo = document.querySelector('#contacto input[type="text"][placeholder="Team..."]').value;
+  var equipo = document.querySelector('#contacto input[type="text"][placeholder="Team"]').value;
   var mensaje = document.querySelector('#contacto textarea').value;
 
   // Crear un objeto con los datos del formulario
@@ -65,8 +66,8 @@ function enviarFormulario(event) {
     mensaje: mensaje
   };
 
-  // Enviar los datos al servidor utilizando la API Fetch
-  fetch('https://portafolio-responsive.vercel.app/', {
+  // Enviar los datos al servidor utilizando noddemailer
+  fetch('/formulario', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -88,3 +89,8 @@ function enviarFormulario(event) {
       console.error('Error en la solicitud:', error);
     });
 }
+
+// Obtener referencia al formulario y agregar el evento de envío
+var formulario = document.querySelector('#miFormulario');
+formulario.addEventListener('submit', enviarFormulario);
+ */
