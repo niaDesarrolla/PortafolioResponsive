@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 #inicio{
-    background: linear-gradient(rgba(0, 0, 0,.7),rgba(0, 0, 0, .7)), url(img/pc.jpg);
+    background: linear-gradient(rgba(0, 0, 0,.7),rgba(0, 0, 0, .7)), url(img/pc4.jpg);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -77,18 +77,24 @@ html{
     justify-content: center;
 }
 #inicio .contenido .presentacion .bienvenida{
-    font-size: 16px;
+    font-size: 25px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 #inicio .contenido .presentacion h2{
-    font-size: 55px;
+    font-size: 30px;
     margin-bottom: 25px;
-    text-align: center;   
+    text-align: center; 
+    color: #d3d3d3;  
+}
+#inicio .contenido .presentacion p{
+    font-size: 20px;
+    color: #d3d3d3;
+  
 }
 #inicio .contenido .presentacion h2 span{
-    font-size: 25px;
+    font-size: 55px;
     color: #a159a3;
 }
 #inicio .contenido .presentacion .descripcion{
@@ -96,6 +102,7 @@ html{
     margin: 25px auto;
     font-size: 18px;
     text-align: center;
+
 }
 /* boton ir a portafolio */
 #inicio .contenido .presentacion a{
@@ -119,6 +126,7 @@ html{
    color: #fff;
    display: none;
 }
+
 
 /* Seccion sobre mi */
 #sobremi{

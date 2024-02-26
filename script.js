@@ -23,7 +23,7 @@ function responsiveMenu(){
     if(x.className===""){
         x.className ="responsive";
     }else{
-        x.className === ""
+        x.className === "";
     }
 }
 
@@ -47,16 +47,16 @@ function efectoHabilidades(){
 }
 
 //funcionalidad del formulario
-/* 
+
 function enviarFormulario(event) {
   event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
 
 
   // Obtener los valores de los campos del formulario
-  var nombre = document.querySelector('#contacto input[type="text"][placeholder="Nombre Completo"]').value;
-  var correo = document.querySelector('#contacto input[type="text"][placeholder="Direccion de email"]').value;
-  var equipo = document.querySelector('#contacto input[type="text"][placeholder="Team"]').value;
-  var mensaje = document.querySelector('#contacto textarea').value;
+  var nombre = document.querySelector('#miFormulario input[name="nombre"][placeholder="Nombre Completo"]').value;
+  var correo = document.querySelector('#miFormulario input[name="correo"][placeholder="Direccion de email"]').value;
+  var equipo = document.querySelector('#miFormulario input[name="equipo"][placeholder="Team"]').value;
+  var mensaje = document.querySelector('#miFormulario textarea[name="mensaje"]').value;
 
   // Crear un objeto con los datos del formulario
   var datosFormulario = {
@@ -79,6 +79,7 @@ function enviarFormulario(event) {
       if (response.ok) {
         // El formulario se envió correctamente
         console.log('Formulario enviado con éxito');
+        document.getElementById('mensajeExito').innerText = '¡Formulario enviado con éxito!';
       } else {
         // Hubo un error al enviar el formulario
         console.error('Error al enviar el formulario');
@@ -88,9 +89,11 @@ function enviarFormulario(event) {
       // Manejar errores de red u otros errores
       console.error('Error en la solicitud:', error);
     });
+
+    
 }
 
 // Obtener referencia al formulario y agregar el evento de envío
 var formulario = document.querySelector('#miFormulario');
 formulario.addEventListener('submit', enviarFormulario);
- */
+

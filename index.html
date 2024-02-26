@@ -40,8 +40,8 @@
             </header>
             <div class="presentacion">
                 <p class="bienvenida">Bienvenidos</p>
-                <h2>Soy <span>Niafiola Cartaya</span>, Desarrolladora Web</h2>
-                <p class="description">Trabajo en la creación de sitios web responsivos,ofreciendo soluciones digitales que se ajustan a las necesidades de cada  cliente, aplicando herramientas de Html, Css, Javascript o React.</p>
+                <h2>Soy <span class="Name">Niafiola Cartaya</span>, Desarrolladora Web</h2>
+                <p class="description">Trabajo en la creación de sitios web responsivos, ofreciendo soluciones digitales que se ajustan a las necesidades de cada  cliente, aplicando herramientas de Html, Css, Javascript y React.</p>
                 <a href="#portfolio">Ir a Portafolio</a>
             </div>
         </div>
@@ -50,7 +50,7 @@
     <!-- SECCION SOBRE MI -->
     <section id="sobremi">
         <div class="contenedor-foto">
-            <img src="img/retratoPrueba.jpg" alt="">
+            <img src="img/retratonia1.jpg" alt="">
         </div>
         <div class="sobremi">
             <p class="titulo-seccion">Sobre Mi</p>
@@ -58,7 +58,7 @@
             <h3>Desarrolladora Web Full Stack</h3>
             <p>Soy una Desarrolladora Web trainee con conocimientos en HTML, CSS, JavaScript, React y Bases de Datos. Tengo experiencia en proyectos desarrollados a lo largo de mi formación como un Quizz game, calculadora, una app del clima, entre otros; que me han permitido poner en práctica mis conocimientos.  
                 Además de mi experiencia técnica, me destaco por poseer habilidades blandas como Inteligencia emocional y comunicación asertiva, que he  adquirido como estudiante de educación especial, así como por mi pasión por la psicología y la salud mental. Estos intereses me han permitido desarrollar una perspectiva única y empática al crear soluciones digitales. Además mis antecedentes laborales previos en contabilidad y administración me han brindado una base sólida en el aspecto empresarial y la gestión de proyectos. Estoy emocionada por combinar mis habilidades técnicas y mi formación en todas estas áreas para crear experiencias web atractivas y accesibles que tengan un impacto positivo en las personas y las organizaciones.</p>
-            <a href="https://drive.google.com/file/d/1IPPqwrEmxiX8YJYimIqRdt0ZsB4wYr3d/view?usp=sharing"download>Descargar CV</a>
+            <a href="https://drive.google.com/file/d/1GbF6PZa7_yJavI4MCYieY2N05odNFBi8/view?usp=sharing"download>Descargar CV</a>
         </div>
     </section>
     <!-- SECCION SERVICIOS -->
@@ -120,7 +120,7 @@
                     <li>Graphic</li>
                     <li>SEO</li>
                 </ul>
-                <P>trabajo en la implementación y gestión de bases de datos, utilizando tecnologías como MySQL, PostgreSQL o MongoDB para almacenar y administrar datos de manera eficiente.</P>
+                <P>trabajo en la implementación y gestión de bases de datos, utilizando tecnologías como MongoDB para almacenar y administrar datos de manera eficiente.</P>
             </div>
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-code"></i></i></span>
@@ -263,7 +263,7 @@
  <section id="contacto">
     <h3 class="titulo-seccion">Contáctame ahora</h3>
     <div class="contenedor-form">
-        <form action "https://formsubmit.co/niadesarrolla@gmail.com" method="POST">
+        <form id="miFormulario" action "https://formsubmit.co/niadesarrolla@gmail.com" method="POST">
             <div class="fila mitad">
                 <input type="text" placeholder="Nombre Completo" id="nombre" name="nombre" class="input-mitad">
                 <input type="text" placeholder="Direccion de email" id="correo" name="correo" class="input-mitad">
@@ -284,7 +284,8 @@
         <input type="hidden" name="_captcha" value="false"
     </form>
     </div>
-
+   <!-- Aquí se muestra el mensaje de éxito -->
+   <div id="mensajeExito"></div>
  </section>
 
  <!-- SECCION FOOTER -->
