@@ -577,6 +577,10 @@ footer a{
 
 }
 
+#trucazo{
+    opacity: 0;
+} 
+
 /* luego escribir en el html en la seccion head:
 , user-scalable=no (en el tercer enlace, meta name sguido del 0
 dentro de las comillas*/

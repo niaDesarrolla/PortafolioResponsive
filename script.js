@@ -47,53 +47,22 @@ function efectoHabilidades(){
 }
 
 //funcionalidad del formulario
+document.addEventListener("DOMContentLoaded", function() {
+const $form = document.querySelector('#miFormulario');
+const $buttonMailto = document.querySelector('#trucazo');
 
-function enviarFormulario(event) {
-  event.preventDefault(); // Evita el comportamiento predeterminado de enviar el formulario
+$form.addEventListener('submit', handleSubmit);
 
-
-  // Obtener los valores de los campos del formulario
-  var nombre = document.querySelector('#miFormulario input[name="nombre"][placeholder="Nombre Completo"]').value;
-  var correo = document.querySelector('#miFormulario input[name="correo"][placeholder="Direccion de email"]').value;
-  var equipo = document.querySelector('#miFormulario input[name="equipo"][placeholder="Team"]').value;
-  var mensaje = document.querySelector('#miFormulario textarea[name="mensaje"]').value;
-
-  // Crear un objeto con los datos del formulario
-  var datosFormulario = {
-    nombre: nombre,
-    correo: correo,
-    equipo: equipo,
-    mensaje: mensaje
-  };
-
-  // Enviar los datos al servidor utilizando noddemailer
-  fetch('/formulario', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(datosFormulario),
-  })
-    .then(function(response) {
-      // Manejar la respuesta del servidor
-      if (response.ok) {
-        // El formulario se envió correctamente
-        console.log('Formulario enviado con éxito');
-        document.getElementById('mensajeExito').innerText = '¡Formulario enviado con éxito!';
-      } else {
-        // Hubo un error al enviar el formulario
-        console.error('Error al enviar el formulario');
-      }
-    })
-    .catch(function(error) {
-      // Manejar errores de red u otros errores
-      console.error('Error en la solicitud:', error);
-    });
-
-    
+function handleSubmit (event) {
+    event.preventDefault();
+    const form = new FormData($form);
+    const nombre = form.get('nombre');
+    const correo = form.get('correo');
+    const equipo = form.get('equipo');
+    const mensaje = form.get('mensaje');
+    console.log(form.get(nombre, correo, equipo, mensaje));
+    $buttonMailto.setAttribute('href', `mailto:cont4cto.nia@gmail.com?subject=nombre ${nombre} correo ${correo}&body=equipo: ${equipo} mensaje: ${mensaje}`)
+    $buttonMailto.click()
 }
-
-// Obtener referencia al formulario y agregar el evento de envío
-var formulario = document.querySelector('#miFormulario');
-formulario.addEventListener('submit', enviarFormulario);
+});
 
